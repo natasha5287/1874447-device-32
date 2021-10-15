@@ -101,35 +101,35 @@
                 <label class="control">
                   <input class="control-input" type="checkbox" name="black" checked>
                   <span class="control-mark"></span>
-                  <span>Черный</span>
+                  <span class="control-label">Черный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="white" checked>
                   <span class="control-mark"></span>
-                  <span>Белый</span>
+                  <span class="control-label">Белый</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="blue">
                   <span class="control-mark"></span>
-                  <span>Синий</span>
+                  <span class="control-label">Синий</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="red">
                   <span class="control-mark"></span>
-                  <span>Красный</span>
+                  <span class="control-label">Красный</span>
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control">
                   <input class="control-input" type="checkbox" name="pink">
                   <span class="control-mark"></span>
-                  <span>Розовый</span>
+                  <span class="control-label">Розовый</span>
                 </label>
               </li>
             </ul>
@@ -163,9 +163,9 @@
         <form class="sorting-type">
           <label class="filter-title" for="sorting">cортировка:</label>
           <select class="select-control" id="sorting" name="sorting">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
+            <option class="sorting-label" value="popular">Сначала популярные</option>
+            <option class="sorting-label" value="cheap">Сначала дешёвые</option>
+            <option class="sorting-label" value="expensive">Сначала дорогие</option>
           </select>
           <button class="visually-hidden" type="submit">Отсортировать продукты</button>
         </form>
@@ -175,7 +175,7 @@
               <a class="product-card-link" href="product.html">
                 <img class="product-card-image" src="img/product-1.jpg" alt="" width="360" height="380">
               </a>
-              <a href="">
+              <a class="product-card-title-link" href="">
                 <h4 class="product-card-title">Любительская селфи-палка</h4>
               </a>
               <span class="product-card-title-price">500 ₽</span>
@@ -184,7 +184,7 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="img/product-2.jpg" alt="" width="360" height="380">
               </a>
-              <a href="">
+              <a class="product-card-title-link" href="">
                 <h4 class="product-card-title">Профессиональная селфи-палка </h4>
               </a>
               <span class="product-card-title-price">1500 ₽</span>
@@ -193,7 +193,7 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="img/product-3.jpg" alt="" width="360" height="380">
               </a>
-              <a href="">
+              <a class="product-card-title-link" href="">
                 <h4 class="product-card-title">Непотопляемая селфи-палка</h4>
               </a>
               <span class="product-card-title-price">2500 ₽</span>
@@ -202,7 +202,7 @@
               <a class="product-card-link" href="#">
                 <img class="product-card-image" src="img/product-4.jpg" alt="" width="360" height="380">
               </a>
-              <a href="">
+              <a class="product-card-title-link" href="">
                 <h4 class="product-card-title">Селфи-палка «Следуй за мной»</h4>
               </a>
               <span class="product-card-title-price">4900 ₽</span>
@@ -216,7 +216,7 @@
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-prev pagination-disabled">
-              <span>Назад</span>
+              <span class="pagination-label">Назад</span>
             </a>
           </li>
           <li class="pagination-item">
@@ -266,7 +266,7 @@
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-next" href="#">
-              <span>вперёд</span>
+              <span class="pagination-label">вперёд</span>
             </a>
           </li>
         </ul>
