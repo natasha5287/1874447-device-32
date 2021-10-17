@@ -42,6 +42,7 @@ body{
 
 .page-header {
   color: #000000;
+  background-color: #ffe17f;
 }
 
 .user-navigation-link {
@@ -90,6 +91,13 @@ body{
 }
 
 /* Каталог */
+
+.category-link {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  background-color: #ffe17f;
+}
 
 .category-title {
   font-family: "Raleway", sans-serif;
