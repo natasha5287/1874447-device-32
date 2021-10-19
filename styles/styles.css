@@ -46,6 +46,17 @@ body{
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
 li:not(.transport-item) {
   list-style-type: none;
 }
@@ -184,7 +195,13 @@ li:not(.transport-item) {
 }
 
 .category-link {
-  display: inline-block;
+
+}
+
+.category-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 160px;
   height: 160px;
   background-color: #ffe17f;
