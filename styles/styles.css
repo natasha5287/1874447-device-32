@@ -195,7 +195,7 @@ li:not(.transport-item) {
 }
 
 .category-link {
-
+  text-decoration: none;
 }
 
 .category-wrapper {
@@ -345,12 +345,16 @@ li:not(.transport-item) {
   outline: 1px solid green;
 }
 
+.footer-address:last-child {
+  text-align: end;
+  vertical-align: middle;
+}
+
 .footer-nav {
   display: flex;
   justify-content: space-between;
   padding: 0;
   width: 458px;
-  outline: 1px solid green;
 }
 
 .footer-nav-link {
@@ -390,6 +394,11 @@ li:not(.transport-item) {
 
 /* Хедер каталога */
 
+.inner-header {
+  width: 1160px;
+  margin: 0 auto;
+}
+
 .breadcrumbs-link {
   font-size: 16px;
   line-height: 19px;
@@ -401,7 +410,17 @@ li:not(.transport-item) {
 /* Фильтры */
 
 .catalog-products {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
   color: #000000;
+}
+
+.catalog-filter {
+  width: 200px;
+  padding-left: 60px;
+  padding-right: 68px;
+  outline: 1px solid red;
 }
 
 .filter-title {
@@ -432,6 +451,21 @@ li:not(.transport-item) {
 .sorting-label {
   font-size: 16px;
   line-height: 19px;
+}
+
+/* Сортировка товара */
+
+.catalog-right-column {
+  width: 832px;
+  outline: 1px solid red;
+}
+
+.sorting-title {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 /* Карточка товара */
