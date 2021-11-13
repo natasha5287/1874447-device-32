@@ -19,7 +19,8 @@
       <ul class="user-nav-list">
         <li class="user-nav-item">
           <form class="nav-form" action="https://echo.htmlacademy.ru/" method="get">
-            <input class="nav-search" type="text" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="nav-search">Поиск по сайту</label>
+            <input class="nav-search" type="text" id="nav-search" placeholder="Поиск по сайту">
           </form>
         </li>
         <li class="user-nav-item">
@@ -37,12 +38,56 @@
             <span class="user-basket">2</span>
             Корзина
           </a>
+          <div class="popover popover-card">
+
+            <div class="popover-content">
+              <h2 class="visually-hidden">Корзина</h2>
+              <ul class="cart-items-list">
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <img class="cart-img" src="img/product-1.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                    <p class="cart-item-title">Любительская селфи-палка</p>
+                  </a>
+                  <button type="button" class="cart-item-button">
+                    <svg width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z"/></svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart-item">
+                  <a class="cart-item-link" href="#">
+                    <img class="cart-img" src="img/product-2.jpg" width="41" height="43" alt="Любительская селфи-палка">
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                  </a>
+                  <button type="button" class="cart-item-button">
+                    <svg  width="11" height="11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m11 1-1-1-4.5 4.5L1 0 0 1l4.5 4.5L0 10l1 1 4.5-4.5L10 11l1-1-4.5-4.5L11 1Z" /></svg>
+                    <span class="visually-hidden">Удалить из корзины</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="cart-goods">
+                <span>Товаров: 2</span>
+                <span>Сумма: 2000 ₽</span>
+              </div>
+              <a class="button cart-btn" href="">Открыть корзину</a>
+
+            </div>
+
+
+          </div>
         </li>
       </ul>
 
       <ul class="nav-list">
         <li class="nav-item">
           <a class="nav-link nav-link-catalog" href="#">Каталог товаров</a>
+          <ul class="subcatalog">
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Виртуальная реальность</a></li>
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Моноподы для cелфи</a></li>
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Экшн-камеры</a></li>
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Фитнес-браслеты</a></li>
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Умные часы</a></li>
+            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Квадрокоптеры</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Доставка</a>
@@ -91,13 +136,19 @@
 
                 <ol class="slider-pagination">
                   <li class="slider-pagination-item">
-                    <input type="radio" id="slider-1" name="active-slider">
+                    <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                      <span class="visually-hidden">Слайдер 1</span>
+                    </button>
                   </li>
                   <li class="slider-pagination-item">
-                    <input type="radio" id="slider-2" name="active-slider">
+                    <button class="slider-pagination-button" type="button">
+                      <span class="visually-hidden">Слайдер 2</span>
+                    </button>
                   </li>
                   <li class="slider-pagination-item">
-                    <input type="radio" id="slider=3" name="active-slider">
+                    <button class="slider-pagination-button" type="button">
+                      <span class="visually-hidden">Слайдер 3</span>
+                    </button>
                   </li>
                 </ol>
 
@@ -214,7 +265,7 @@
 
     <!-- Модальное окно -->
 
-    <div class="modal">
+    <div class="modal-main">
       <button class="button-modal" type="button">Доставим редкий товар под заказ</button>
     </div>
 
@@ -264,8 +315,8 @@
     <section class="newsletter">
       <div class="newsletter-container">
         <div class="newsletter-wrapper">
-          <h2 class="newsletter-item title">Подпишитесь<br> на рассылку</h2>
-          <p class="newsletter-item">Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции,
+            <h2 class="newsletter-item title">Подпишитесь<br> на рассылку</h2>
+            <p class="newsletter-item">Еженедельный дайджест с обзорами новинок,<br> длительными тест-драйвами, распаковками, а также акции,
             спецпредложения и вот это вот всё.</p>
         </div>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -273,8 +324,7 @@
             <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
               required>
             <button class="button newsletter-button" type="submit">Подписаться</button>
-
-          <span class="newsletter-free">Это бесплатно</span>
+            <span class="newsletter-free">Это бесплатно</span>
         </form>
       </div>
     </section>
@@ -345,6 +395,51 @@
     </div>
 
   </footer>
+
+
+  <div class="modal-container">
+    <div class="modal modal-delivery">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+
+        <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+          <p class="field-group delivery-form-name">
+            <label class="form-label" for="delivery-name">Ваше имя:</label>
+            <input class="modal-field" type="text" id="delivery-name" name="delivery-name" placeholder="Имя Фамилия">
+            <span class="field-text  text-red">Пожалуйста, представьтесь</span>
+         </p>
+
+          <p class="field-group delivery-form-email">
+            <label class="form-label" for="delivery-email">Ваш e-mail:</label>
+            <input class="modal-field" type="email" id="delivery-email" name="delivery-email" placeholder="krasotka92@mail.ru" required>
+            <span class="field-text">Забавный у вас адрес</span>
+          </p>
+
+          <p class="field-group delivery-form-description">
+            <label class="form-label" for="delivery-description">Что нужно привезти:</label>
+            <input class="modal-field" type="text" id="delivery-description" name="delivery-description" placeholder="В свободной форме" required>
+          </p>
+
+          <p class="field-group delivery-form-number">
+            <span class="form-label form-label-icon">
+              <label for="delivery-number">Количество:</label>
+              <button class="modal-info">
+                <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+              </button>
+            </span>
+            <input class="modal-field" type="text" id="delivery-number" name="delivery-number" placeholder="">
+          </p>
+
+          <button class="button modal-btn" type="submit">Отправить</button>
+
+        </form>
+      </section>
+
+    </div>
+  </div>
 
 </body>
 
