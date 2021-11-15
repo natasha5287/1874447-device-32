@@ -28,7 +28,7 @@
             Войти
           </a>
         </li>
-        <li class="user-nav-item">
+        <li class="user-nav-item item-compare">
           <a class="user-nav-link link-compare" href="#">
             Сравнить
           </a>
@@ -80,14 +80,20 @@
       <ul class="nav-list">
         <li class="nav-item">
           <a class="nav-link nav-link-catalog" href="#">Каталог товаров</a>
-          <ul class="subcatalog">
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Виртуальная реальность</a></li>
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Моноподы для cелфи</a></li>
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Экшн-камеры</a></li>
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Фитнес-браслеты</a></li>
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Умные часы</a></li>
-            <li class="subcatalog-item"><a class="subcatalog-link" href="#">Квадрокоптеры</a></li>
-          </ul>
+          <div class="subcatalog-wrap">
+            <ul class="subcatalog">
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Виртуальная реальность</a></li>
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Моноподы для cелфи</a></li>
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Экшн-камеры</a></li>
+            </ul>
+            <ul class="subcatalog">
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Фитнес-браслеты</a></li>
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Умные часы</a></li>
+            </ul>
+            <ul class="subcatalog">
+              <li class="subcatalog-item"><a class="subcatalog-link" href="#">Квадрокоптеры</a></li>
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Доставка</a>
@@ -426,11 +432,13 @@
           <p class="field-group delivery-form-number">
             <span class="form-label form-label-icon">
               <label for="delivery-number">Количество:</label>
-              <button class="modal-info">
+              <button class="modal-info" type="button">
                 <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                <span class="info-text">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                  к провозу багажа.</span>
               </button>
             </span>
-            <input class="modal-field" type="text" id="delivery-number" name="delivery-number" placeholder="">
+            <input class="modal-field" type="number" id="delivery-number" name="delivery-number" placeholder="">
           </p>
 
           <button class="button modal-btn" type="submit">Отправить</button>
