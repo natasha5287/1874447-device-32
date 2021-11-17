@@ -21,6 +21,7 @@
           <form class="nav-form" action="https://echo.htmlacademy.ru/" method="get">
             <label class="visually-hidden" for="nav-search">Поиск по сайту</label>
             <input class="nav-search" type="text" id="nav-search" placeholder="Поиск по сайту">
+            <button class="nav-form-btn" type="button">Найти</button>
           </form>
         </li>
         <li class="user-nav-item">
@@ -390,9 +391,9 @@
             <li class="transport-item">СДИК</li>
             <li class="transport-item">ТоксБерри</li>
           </ul>
-          <div class="btn-about-wrapper">
+
             <a class="button btn-about" href="#">Подробнее о нас</a>
-          </div>
+
         </section>
 
         <section class="contacts">
@@ -400,7 +401,7 @@
           <p>Вы можете забрать товар сами, заехав в наш офис.<br> Заодно сможете проверить работоспособность покупки. </p>
           <h3 class="contacts-title">Интернет-магазин «Девайс»</h3>
           <address class="contacts-address">
-            Санкт-Петербург, набережная реки Карповки, 5, литера П.
+            <span>Санкт-Петербург, набережная реки Карповки, 5, литера П.</span>
             <a class="contacts-phone" href="tel:78128121212">+7 (812) 812-12-12</a>
           </address>
           <h3 class="contacts-title">Время работы</h3>
@@ -409,9 +410,9 @@
             <li class="contacts-schedule-item">пн—пт: с 10:00 до 22:00</li>
             <li class="contacts-schedule-item">сб—вс: с 10:00 до 19:00</li>
           </ul>
-          <div class="btn-feedback-wrapper">
-            <a class="button btn-feedback" href="#">Напишите нам</a>
-          </div>
+
+            <a class="button btn-about" href="#">Напишите нам</a>
+
         </section>
 
     </div>
@@ -538,7 +539,11 @@
                   к провозу багажа.</span>
               </button>
             </span>
-            <input class="modal-field" type="number" id="delivery-number" name="delivery-number" placeholder="">
+            <span class="delivery-number-wrap">
+              <button class="delivery-number-btn number-btn-minus" type="button"></button>
+              <input class="modal-field" type="text" id="delivery-number" name="delivery-number" placeholder="1">
+              <button class="delivery-number-btn number-btn-plus" type="button"></button>
+            </span>
           </p>
 
           <button class="button modal-btn" type="submit">Отправить</button>
