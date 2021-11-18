@@ -1509,11 +1509,12 @@ background-color: #dcdcdc;
 .inner-header {
   width: 1160px;
   margin: 0 auto;
-  padding: 37px 60px 45px 60px;
+  padding: 37px 0 43px 0;
 }
 
 .inner-header .title {
   margin-bottom: 18px;
+  padding-left: 60px;
 }
 
 .breadcrumbs {
@@ -1521,14 +1522,14 @@ background-color: #dcdcdc;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0;
-  margin-left: -15px;
   padding: 0;
+  padding-left: 45px;
   list-style-type: none;
 }
 
 .breadcrumbs-item {
   position: relative;
-  margin-right: 11px;
+  margin-right: 10px;
 }
 
 .breadcrumbs-item::after {
@@ -1576,6 +1577,10 @@ background-color: #dcdcdc;
 /* Фильтры */
 
 .catalog-products {
+}
+
+.catalog-products-wrap {
+  position: relative;
   display: flex;
   width: 1160px;
   margin: 0 auto;
@@ -1587,39 +1592,40 @@ background-color: #dcdcdc;
   width: 328px;
   padding-left: 60px;
   padding-right: 68px;
-  background-color: #ebebeb;
+}
+
+.filter-title-wrap {
+  height: 70px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 .filter-title {
   margin: 0;
-  margin-bottom: 83px;
-  margin-left: -60px;
-  padding: 25px 0 25px 60px;
-  width: 328px;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  background-color: #dcdcdc;
 }
 
 .catalog-filter-title {
   position: relative;
-  margin-bottom: 22px;
+  padding: 12px 0;
+  margin-bottom: 13px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
 }
 
-.filter-title-price {
-  margin-bottom: 37px;
+.catalog-filter-comtent {
+  padding-top: 70px;
 }
 
 .catalog-filter-title::before {
   content: "";
   position: absolute;
-  top: -14px;
+  top: -1px;
   width: 200px;
   height: 2px;
   background-color: #000000;
@@ -1629,6 +1635,7 @@ background-color: #dcdcdc;
 
 .range {
   max-width: 220px;
+  padding: 12px 0;
 }
 
 .range-scale {
@@ -1676,11 +1683,15 @@ background-color: #dcdcdc;
 
 .range-wrapper-inputs {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .catalog-filter-label {
   display: flex;
+  margin-right: 15px;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.3;
 }
 
 .range-input {
@@ -1702,21 +1713,14 @@ background-color: #dcdcdc;
 
 .catalog-filter-group {
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 23px;
   padding: 0;
   border: none;
 }
 
-.catalog-filter-group:last-child {
-  mb38px
-}
-
-.filter-color {
-  margin-bottom: 53px;
-}
-
 .catalog-filter-list {
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
   list-style-type: none;
 }
@@ -1724,13 +1728,6 @@ background-color: #dcdcdc;
 .catalog-filter-item:not(:last-child) {
   margin-bottom: 10px;
 }
-
-.catalog-filter-label {
-  font-size: 15px;
-  line-height: 18px;
-  opacity: 0.3;
-}
-
 
 /* Чекбоксы */
 
@@ -1872,7 +1869,7 @@ background-color: #dcdcdc;
   display: flex;
   align-items: center;
   padding: 11px 0 8px 72px;
-  background-color: #ebebeb;
+  height: 70px;
 }
 
 .sorting-type {
