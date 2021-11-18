@@ -783,7 +783,6 @@ a:focus {
 .category-link:active::before {
   background-color: #ffc700;
   box-shadow: none;
-  fill-opacity: 0.3;
 }
 
 .category-link:active .category-title {
@@ -1592,6 +1591,7 @@ background-color: #dcdcdc;
   width: 328px;
   padding-left: 60px;
   padding-right: 68px;
+  background-color: #ebebeb;
 }
 
 .filter-title-wrap {
@@ -1618,7 +1618,7 @@ background-color: #dcdcdc;
   letter-spacing: -0.02em;
 }
 
-.catalog-filter-comtent {
+.catalog-filter-content {
   padding-top: 70px;
 }
 
@@ -1870,6 +1870,7 @@ background-color: #dcdcdc;
   align-items: center;
   padding: 11px 0 8px 72px;
   height: 70px;
+  background-color: #ebebeb;
 }
 
 .sorting-type {
