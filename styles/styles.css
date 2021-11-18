@@ -1592,6 +1592,8 @@ background-color: #dcdcdc;
   width: 328px;
   padding-left: 60px;
   padding-right: 68px;
+  background-image: linear-gradient(to bottom, #dcdcdc 70px, #ebebeb 70px)
+}
 }
 
 .filter-title-wrap {
@@ -1602,6 +1604,7 @@ background-color: #dcdcdc;
 
 .filter-title {
   margin: 0;
+  padding: 25px 0;
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   line-height: 19px;
@@ -1618,8 +1621,8 @@ background-color: #dcdcdc;
   letter-spacing: -0.02em;
 }
 
-.catalog-filter-comtent {
-  padding-top: 70px;
+.catalog-filter-content {
+  padding-top: 73px;
 }
 
 .catalog-filter-title::before {
@@ -1863,6 +1866,7 @@ background-color: #dcdcdc;
 
 .catalog-right-column {
   width: 832px;
+  background-image: linear-gradient(to bottom, #ebebeb 70px, transparent 70px);
 }
 
 .sorting-container {
