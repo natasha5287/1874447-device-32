@@ -118,20 +118,16 @@
                       <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену</span>
                       </button>
+                      <label class="catalog-filter-label">
+                        от <input class="range-input" type="number" name="min-price" value="0" tabindex="-1">
+                      </label>
                       <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену</span>
                       </button>
+                      <label class="catalog-filter-label">
+                        до <input class="range-input" type="number" name="max-price" value="5000" tabindex="-1">
+                      </label>
                     </div>
-                  </div>
-
-                  <div class="range-wrapper-inputs">
-                    <label class="catalog-filter-label">
-                      от <input class="range-input" type="number" name="min-price" value="0">
-                    </label>
-
-                    <label class="catalog-filter-label">
-                      до <input class="range-input" type="number" name="max-price" value="5000">
-                    </label>
                   </div>
                 </div>
               </fieldset>
@@ -224,6 +220,7 @@
               <svg width="11" height="10" aria-hidden="true" focusable="false" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 0 11 10H0" /></svg>
             </a>
           </div>
+
           <div class="product-list-wrap">
             <!-- Список товаров -->
             <ul class="product-list">
@@ -300,9 +297,7 @@
             </ul>
 
           </div>
-        </div>
-
-      </section>
+        </section>
 
 
     </main>

@@ -84,8 +84,8 @@ body {
 }
 
 .navigation {
- padding-left: 43px;
- padding-right: 35px;
+  padding-left: 43px;
+  padding-right: 35px;
 }
 
 .user-nav-list {
@@ -417,16 +417,12 @@ body {
 
 .subcatalog-wrap {
   display: none;
-  padding-bottom: 32px;
   position: absolute;
   width: 100%;
   min-height: 150px;
   margin: 0;
   margin-left: -43px;
-  padding: 0;
-  padding-top: 30px;
-  padding-left: 45px;
-  padding-bottom: 45px;
+  padding: 30px 0 45px 45px;
   background-color: #ffe17f;
   z-index: 1;
 }
@@ -502,7 +498,8 @@ body {
   border: none;
   text-transform: uppercase;
   text-decoration: none;
-  /* outline: none; */
+  cursor: pointer;
+  outline: none;
 }
 
 /*  Слайдер */
@@ -724,44 +721,48 @@ body {
 /* Каталог */
 
 .category {
-  margin-bottom: 68px;
+  margin-bottom: 48px;
 }
 
 .category-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   gap: 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.category-item {
-  width: 160px;
-  min-height: 253px;
-}
-
 .category-link {
   position: relative;
+  display: block;
+  width: 160px;
   text-decoration: none;
 }
 
-.category-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.category-link-background {
+  position: relative;
+  margin-bottom: 33px;
   width: 160px;
   height: 160px;
   background-color: #ffe17f;
-  background-repeat: no-repeat;
+}
+
+.category-link-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .category-virtual::before {
   background-image: url("../img/category/virtual-reality.svg");
 }
+
 
 .category-monopod::before {
   background-image: url("../img/category/monopod.svg");
@@ -785,11 +786,11 @@ body {
 }
 
 
-.category-link:hover::before {
+.category-link:hover .category-link-background {
   background-color: #ffc700;
 }
 
-.category-link:focus::before {
+.category-link:focus .category-link-background {
   box-shadow: inset 0 0 0 5px #af4fff;
 }
 
@@ -801,10 +802,13 @@ body {
   color: #af4fff;
 }
 
-.category-link:active::before {
-  background-color: #ffc700;
+.category-link:active .category-link-background {
   box-shadow: none;
-  fill-opacity: 0.3;
+  background-color: #ffc700;
+}
+
+.category-link:active .category-link-background::before {
+  opacity: 0.3;
 }
 
 .category-link:active .category-title {
@@ -813,8 +817,6 @@ body {
 }
 
 .category-title {
-  position: relative;
-  top: 193px;
   margin: 0;
   margin-bottom: 33px;
   font-family: "Raleway", "Arial", sans-serif;
@@ -980,7 +982,6 @@ body {
   top: 0;
   left: 0;
   box-sizing: border-box;
-  background-color: #ffe17f;
   border: 5px solid transparent;
   border-right: 0;
   background: no-repeat url("../img/delivery-1.svg") center #ffe17f;
@@ -1221,8 +1222,6 @@ body {
   background-color: transparent;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
 }
-
-
 
 .field::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(68, 68, 68, 0.5);
@@ -1623,14 +1622,11 @@ body {
 }
 
 .catalog-products {
-  background-color: #ebebeb;
-}
-
-.catalog-products {
   display: grid;
   grid-template-columns: 1fr 328px 832px 1fr;
   grid-template-rows: 70px auto;
   background-color: #ebebeb;
+  overflow: hidden;
 }
 
 /* Фильтры */
@@ -1676,7 +1672,7 @@ body {
 .catalog-filter-title {
   position: relative;
   padding: 12px 0;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: -0.02em;
@@ -1705,7 +1701,7 @@ body {
 .range-scale {
   position: relative;
   height: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   background-color: #dcdcdc;
 }
 
@@ -1730,9 +1726,30 @@ body {
   outline: none;
 }
 
+.range-toggle:focus + .catalog-filter-label {
+  color: #af4fff;
+}
+
+/* .range-toggle:not(:focus-visible) + .catalog-filter-label,
+.range-toggle:not(:focus-visible) + .catalog-filter-label .catalog-filter-input {
+  outline: none;
+  border-color: transparent;
+  border: none;
+  background-color: transparent;
+  color: #000000;
+} */
+
 .range-toggle:active {
   background-color: #000000;
   border: 2px solid #000000;
+}
+
+.range-toggle:active + .catalog-filter-label {
+  color: #000000;
+}
+
+.catalog-filter-input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .toggle-min {
@@ -1740,22 +1757,28 @@ body {
   left: 0;
 }
 
+.toggle-min + .catalog-filter-label {
+  left: -5px;
+}
+
 .toggle-max {
   top: -9px;
   right: -9px;
 }
 
-.range-wrapper-inputs {
-  display: flex;
-  justify-content: flex-start;
+.toggle-max + .catalog-filter-label {
+  right: 0;
+  transform: translateX(50%);
 }
 
 .catalog-filter-label {
+  position: absolute;
+  top: 17px;
   display: flex;
-  margin-right: 25px;
+  max-width: 60px;
   font-size: 15px;
   line-height: 18px;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .range-input {
@@ -1763,6 +1786,7 @@ body {
   padding: 0 2px;
   font: inherit;
   text-align: left;
+  color: inherit;
   background-color: transparent;
   border: none;
   appearance: textfield;
@@ -1781,6 +1805,12 @@ body {
   border: none;
 }
 
+.catalog-filter-group:first-of-type {
+  margin-bottom: 12px;
+}
+
+/* Чекбоксы */
+
 .catalog-filter-list {
   margin: 0;
   margin-bottom: 15px;
@@ -1792,7 +1822,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Чекбоксы */
 
 .control {
   position: relative;
@@ -2006,6 +2035,7 @@ body {
   position: relative;
   grid-column: 3/4;
   grid-row: 2/3;
+  padding: 69px 0 77px 72px;
 }
 
 .product-list-wrap::before {
@@ -2023,7 +2053,8 @@ body {
   grid-template-columns: 360px 360px;
   column-gap: 40px;
   row-gap: 44px;
-  margin: 69px 0 44px 72px;
+  margin: 0;
+  margin-bottom: 47px;
   padding: 0;
   list-style-type: none;
 }
@@ -2144,7 +2175,7 @@ body {
 }
 
 .product-list-show-more {
-  margin-left: 72px;
+  position: relative;
   margin-bottom: 51px;
   width: 760px;
   min-height: 55px;
@@ -2176,10 +2207,11 @@ body {
 /* Пагинация */
 
 .pagination {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 0 77px 72px;
+  margin: 0;
   padding: 0;
   background-color: #ebebeb;
   list-style-type: none;
